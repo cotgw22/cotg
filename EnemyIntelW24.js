@@ -39,7 +39,7 @@
 	LoadSheet("https://docs.google.com/spreadsheets/d/e/2PACX-1vQxsaN3fqtIssMRpqPaz_0SqbIKTl3jIwjDxO0yG9o87gz8a3N42yiZ3oPtFCRs38Hrvbr9BAIOiej-/pubhtml").then(data => {
             let DiscoveredTroopInfo;
             data[Object.keys(data)[0]].forEach(function(entry, index) {
-                if ($("#citycoords").text() == entry[3]) DiscoveredTroopInfo = entry;
+                if ($("#citycoords").text() == entry[2]) DiscoveredTroopInfo = entry;
             });
             (DiscoveredTroopInfo != null) ? $("#TroopsHere").html(DiscoveredTroopInfo[0].split("/")[1]+"/"+DiscoveredTroopInfo[0].split("/")[0]+": "+DiscoveredTroopInfo[2]) : $("#TroopsHere").text("No Info");
 
