@@ -41,7 +41,7 @@
             data[Object.keys(data)[0]].forEach(function(entry, index) {
                 if ($("#citycoords").text() == entry[2]) DiscoveredTroopInfo = entry;
             });
-            (DiscoveredTroopInfo != null) ? $("#TroopsHere").html(DiscoveredTroopInfo[0].split("/")[1]+"/"+DiscoveredTroopInfo[0].split("/")[0]+": "+DiscoveredTroopInfo[2]) : $("#TroopsHere").text("No Info");
+            (DiscoveredTroopInfo != null) ? $("#TroopsHere").html(DiscoveredTroopInfo[0].split("/")[1]+"/"+DiscoveredTroopInfo[0].split("/")[0]+": "+DiscoveredTroopInfo[1]) : $("#TroopsHere").text("No Info");
 
 			//link comes from "prefilled link"
             $("#FormLinkGFUNKY").html("<a href='https://docs.google.com/forms/d/e/1FAIpQLSexYNboKHlB2VQSRnsL0gDD97evL8-lW1vio7NeasuAzLllCw/viewform?entry.109348414="+$('#citycoords').text()+"&entry.1683452871="+$('#cityplayername').text()+"&entry.1949543373="+$('#citycont').text()+"&entry.473721675="+$('#cityplayeralliance').text()+"&entry.1294457972="+$('#landframe').hasClass('framewater')+"'target='_blank'>Open in form</a>");
